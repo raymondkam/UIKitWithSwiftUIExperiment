@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SwiftUIContainerViewController: UIViewController {
 
@@ -17,7 +18,24 @@ class SwiftUIContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let loginVC = UIHostingController(rootView: LoginView(loginAction: { loginInfo in
+            // Handle login
+            print("username: \(loginInfo.username), password: \(loginInfo.password)")
+        }))
+        addChild(loginVC)
+        containerView.addSubview(loginVC.view)
+
+        loginVC.view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            loginVC.view.topAnchor.constraint(equalTo: containerView.topAnchor),
+            loginVC.view.leftAnchor.constraint(equalTo: containerView.leftAnchor),
+            containerView.bottomAnchor.constraint(equalTo: loginVC.view.bottomAnchor),
+            containerView.rightAnchor.constraint(equalTo: loginVC.view.rightAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+
+        loginVC.didMove(toParent: self)
     }
 
 }

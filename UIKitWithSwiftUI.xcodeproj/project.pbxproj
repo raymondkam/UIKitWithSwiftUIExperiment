@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F42604D5256C3C56004A1B70 /* SwiftUIContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42604D4256C3C56004A1B70 /* SwiftUIContainerViewController.swift */; };
+		F42604DB256C4520004A1B70 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42604DA256C4520004A1B70 /* LoginView.swift */; };
 		F4B2C2C8256C165100F098A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2C2C7256C165100F098A8 /* AppDelegate.swift */; };
 		F4B2C2CA256C165100F098A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2C2C9256C165100F098A8 /* SceneDelegate.swift */; };
 		F4B2C2CC256C165100F098A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2C2CB256C165100F098A8 /* MainViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		F42604D4256C3C56004A1B70 /* SwiftUIContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIContainerViewController.swift; sourceTree = "<group>"; };
+		F42604DA256C4520004A1B70 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F4B2C2C4256C165100F098A8 /* UIKitWithSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitWithSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B2C2C7256C165100F098A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B2C2C9256C165100F098A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F4B2C2D0256C165300F098A8 /* Assets.xcassets */,
 				F4B2C2D2256C165300F098A8 /* LaunchScreen.storyboard */,
 				F4B2C2D5256C165400F098A8 /* Info.plist */,
+				F42604DA256C4520004A1B70 /* LoginView.swift */,
 			);
 			path = UIKitWithSwiftUI;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				F42604D5256C3C56004A1B70 /* SwiftUIContainerViewController.swift in Sources */,
 				F4B2C2CC256C165100F098A8 /* MainViewController.swift in Sources */,
 				F4B2C2C8256C165100F098A8 /* AppDelegate.swift in Sources */,
+				F42604DB256C4520004A1B70 /* LoginView.swift in Sources */,
 				F4B2C2CA256C165100F098A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

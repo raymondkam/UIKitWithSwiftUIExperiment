@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MainViewController: UITableViewController {
 
@@ -14,6 +15,12 @@ class MainViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBSegueAction func showLogin(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: LoginView(loginAction: { loginInfo in
+            // Do login.. hm..
+            print("username: \(loginInfo.username), password: \(loginInfo.password)")
+        }))
+    }
 
 }
 
