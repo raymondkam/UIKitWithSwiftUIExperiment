@@ -10,6 +10,9 @@ import SwiftUI
 
 class SwiftUIContainerViewController: UIViewController {
 
+    @IBOutlet weak var containerViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerViewHeightConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var topButton: UIButton!
@@ -19,9 +22,11 @@ class SwiftUIContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let loginVC = UIHostingController(rootView: LoginView(loginAction: { loginInfo in
-            // Handle login
-            print("username: \(loginInfo.username), password: \(loginInfo.password)")
+        let loginVC = UIHostingController(rootView: LoginView(viewModel: LoginViewModel(), onSizeChanged: { [weak self] newSize in
+            self?.containerViewWidthConstraint.constant = newSize.width
+            self?.containerViewWidthConstraint.isActive = true
+            self?.containerViewHeightConstraint.constant = newSize.height
+            self?.containerViewHeightConstraint.isActive = true
         }))
         addChild(loginVC)
         containerView.addSubview(loginVC.view)

@@ -16,10 +16,7 @@ class MainViewController: UITableViewController {
     }
 
     @IBSegueAction func showLogin(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: LoginView(loginAction: { loginInfo in
-            // Do login.. hm..
-            print("username: \(loginInfo.username), password: \(loginInfo.password)")
-        }))
+        return UIHostingController(coder: coder, rootView: LoginView(viewModel: LoginViewModel()))
     }
 
 }

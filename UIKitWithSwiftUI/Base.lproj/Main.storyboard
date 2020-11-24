@@ -142,8 +142,14 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcY-vu-7SC">
                                 <rect key="frame" x="0.0" y="250" width="414" height="300"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="2Lh-ic-6yA"/>
                                     <constraint firstAttribute="height" constant="300" id="5cc-Kk-9jY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Lh-ic-6yA"/>
+                                    </mask>
+                                </variation>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sZc-Wj-rlq"/>
@@ -164,6 +170,8 @@
                     <connections>
                         <outlet property="bottomButton" destination="taJ-kp-8sa" id="q82-VW-538"/>
                         <outlet property="containerView" destination="dcY-vu-7SC" id="FRZ-K7-w2t"/>
+                        <outlet property="containerViewHeightConstraint" destination="5cc-Kk-9jY" id="95o-6r-krj"/>
+                        <outlet property="containerViewWidthConstraint" destination="2Lh-ic-6yA" id="gk0-cP-fyv"/>
                         <outlet property="descriptionLabel" destination="s01-ug-QIY" id="9IS-pK-DrT"/>
                         <outlet property="titleLabel" destination="POF-jv-KEE" id="bZW-IN-jiX"/>
                         <outlet property="topButton" destination="6Kv-qQ-b9p" id="TcB-Ad-1Na"/>
