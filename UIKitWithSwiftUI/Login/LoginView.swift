@@ -36,7 +36,10 @@ struct LoginView: View {
             Button("Login") {
                 viewModel.performLogin()
             }
+            .accentColor(.white)
             .padding()
+            .background(RoundedRectangle(cornerRadius: 8)
+                            .foregroundColor(viewModel.isButtonDisabled ? Color.gray : Color.blue))
             .disabled(viewModel.isButtonDisabled)
         }.padding()
         .background(GeometryReader { geometryProxy in

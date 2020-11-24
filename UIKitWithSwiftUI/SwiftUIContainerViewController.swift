@@ -35,8 +35,8 @@ class SwiftUIContainerViewController: UIViewController {
         let constraints = [
             loginVC.view.topAnchor.constraint(equalTo: containerView.topAnchor),
             loginVC.view.leftAnchor.constraint(equalTo: containerView.leftAnchor),
-            containerView.bottomAnchor.constraint(equalTo: loginVC.view.bottomAnchor),
-            containerView.rightAnchor.constraint(equalTo: loginVC.view.rightAnchor)
+            loginVC.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            loginVC.view.rightAnchor.constraint(equalTo: containerView.rightAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
 
