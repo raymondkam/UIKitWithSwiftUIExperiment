@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class SwiftUIContainerViewController: UIViewController {
 
@@ -19,10 +20,15 @@ class SwiftUIContainerViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var containerView: UIView!
 
+    var cancellables = Set<AnyCancellable>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let loginVC = UIHostingController(rootView: LoginView(viewModel: LoginViewModel(), onSizeChanged: { [weak self] newSize in
+        let loginVM = LoginViewModel()
+        handle(loginViewModel: loginVM)
+
+        let loginVC = UIHostingController(rootView: LoginView(viewModel: loginVM, onSizeChanged: { [weak self] newSize in
             self?.containerViewWidthConstraint.constant = newSize.width
             self?.containerViewWidthConstraint.isActive = true
             self?.containerViewHeightConstraint.constant = newSize.height
@@ -43,4 +49,11 @@ class SwiftUIContainerViewController: UIViewController {
         loginVC.didMove(toParent: self)
     }
 
+    private func handle(loginViewModel: LoginViewModel) {
+        loginViewModel.loginSuccess
+            .sink { [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            }
+            .store(in: &cancellables)
+    }
 }

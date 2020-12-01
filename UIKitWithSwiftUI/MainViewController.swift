@@ -7,8 +7,11 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class MainViewController: UITableViewController {
+
+    var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +19,17 @@ class MainViewController: UITableViewController {
     }
 
     @IBSegueAction func showLogin(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: LoginView(viewModel: LoginViewModel()))
+        let loginVM = LoginViewModel()
+        handle(loginViewModel: loginVM)
+        return UIHostingController(coder: coder, rootView: LoginView(viewModel: loginVM))
     }
 
+    private func handle(loginViewModel: LoginViewModel) {
+        loginViewModel.loginSuccess
+            .sink { [weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            }
+            .store(in: &cancellables)
+    }
 }
 

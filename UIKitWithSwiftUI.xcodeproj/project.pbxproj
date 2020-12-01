@@ -15,6 +15,8 @@
 		F4B2C2CF256C165100F098A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B2C2CD256C165100F098A8 /* Main.storyboard */; };
 		F4B2C2D1256C165300F098A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B2C2D0256C165300F098A8 /* Assets.xcassets */; };
 		F4B2C2D4256C165300F098A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B2C2D2256C165300F098A8 /* LaunchScreen.storyboard */; };
+		F4CBA1442576EBEE00C91420 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBA1432576EBEE00C91420 /* ForgotPasswordView.swift */; };
+		F4CBA1472576EC1500C91420 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBA1462576EC1500C91420 /* ForgotPasswordViewModel.swift */; };
 		F4FD7A12256C68A0007260DE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD7A11256C68A0007260DE /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		F4B2C2D0256C165300F098A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4B2C2D3256C165300F098A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4B2C2D5256C165400F098A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CBA1432576EBEE00C91420 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		F4CBA1462576EC1500C91420 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		F4FD7A11256C68A0007260DE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,8 @@
 			children = (
 				F42604DA256C4520004A1B70 /* LoginView.swift */,
 				F4FD7A11256C68A0007260DE /* LoginViewModel.swift */,
+				F4CBA1432576EBEE00C91420 /* ForgotPasswordView.swift */,
+				F4CBA1462576EC1500C91420 /* ForgotPasswordViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -154,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CBA1472576EC1500C91420 /* ForgotPasswordViewModel.swift in Sources */,
 				F42604D5256C3C56004A1B70 /* SwiftUIContainerViewController.swift in Sources */,
+				F4CBA1442576EBEE00C91420 /* ForgotPasswordView.swift in Sources */,
 				F4B2C2CC256C165100F098A8 /* MainViewController.swift in Sources */,
 				F4FD7A12256C68A0007260DE /* LoginViewModel.swift in Sources */,
 				F4B2C2C8256C165100F098A8 /* AppDelegate.swift in Sources */,
