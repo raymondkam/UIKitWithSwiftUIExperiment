@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
-    @ObservedObject var viewModel: ForgotPasswordViewModel
+    @StateObject var viewModel: ForgotPasswordViewModel
 
     @Environment(\.presentationMode) var presentationMode
 

@@ -19,7 +19,7 @@ struct LoginInfo {
 }
 
 struct LoginView: View {
-    @ObservedObject var viewModel: LoginViewModel
+    @StateObject var viewModel: LoginViewModel
     @State var showForgotPassword: Bool = false
 
     var onSizeChanged: ((CGSize) -> Void)? = nil
