@@ -21,7 +21,7 @@ class ForgotPasswordViewModel: ObservableObject {
     init() {
         $email
             .map { email in
-                return !(email.contains("@") && email.contains(".com") && !email.isEmpty)
+                return !(email.contains("@") && (email.contains(".com") || email.contains(".io")) && !email.isEmpty)
             }
             .assign(to: &$isButtonDisabled)
     }

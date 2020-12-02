@@ -37,6 +37,8 @@ struct ForgotPasswordView: View {
                         .foregroundColor(.red)
                 }
                 TextField("Email", text: $viewModel.email)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.black, lineWidth: 1))
