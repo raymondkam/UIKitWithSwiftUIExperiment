@@ -64,17 +64,17 @@ Also adding additional labels for when the password doesn't meet criteria and wh
 ![Part 3 Solution](part-3-solution.gif "Part 3 Solution")
 
 #### Tasks
-- Add a new `Text` that shows up above the password field when password is empty
-- Add a new `Text` that shows up after tapping Login if the username and password are incorrect
-  - Add new logic in the `LoginViewModel` to check for a specific username/password
-- Add new `ForgotPasswordView`
-  - Has a close button (X) at the top left
-  - Has title and description
-  - Has an email text field
-  - Button to submit form
-- Add new `ForgotPasswordViewModel`
-  - Does form validation
-  - Has a function to handle submit
+- [ ] Add a new `Text` that shows up above the password field when password is empty
+- [ ] Add a new `Text` that shows up after tapping Login if the username and password are incorrect
+  - [ ] Add new logic in the `LoginViewModel` to check for a specific username/password
+- [ ] Add new `ForgotPasswordView`
+  - [ ] Has a close button (X) at the top left
+  - [ ] Has title and description
+  - [ ] Has an email text field
+  - [ ] Button to submit form
+- [ ] Add new `ForgotPasswordViewModel`
+  - [ ] Does form validation
+  - [ ] Has a function to handle submit button
 
 #### Solution
 
